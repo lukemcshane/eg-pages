@@ -24,7 +24,8 @@ Just type `eg find` to read the eg page for 'find'.
     
 **shows a handful of examples of the find command**
   
-Customize your `~/.eg` file with the extra details you really want to remember. 
+## Customize:
+Fill out your `~/.eg` file with the extra details you really want to remember. 
 When you next run `eg find` your most useful examples will be right at the top.
 
 Right now, there are very few eg pages. Please contribute some more!
