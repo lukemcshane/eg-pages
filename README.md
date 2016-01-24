@@ -10,7 +10,7 @@ Just type `eg find` to read the eg page for 'find'.
 ## Installation:
 1.  Clone the project into `~/eg`.
 2.  Add the line   
-    `source ~/eg/script/eg.sh`   
+    `source ~/eg/scripts/eg.sh`   
     to `.bash_profile`, `.bashrc`, `.zshrc` or whatever file applies on your system  
     Don't forget to reload the file: 
     `source ~/.bash_profile` 
@@ -38,7 +38,7 @@ To add a section, it's easiest to adapt one of the existing ones
 - .B makes a line bold
 
 ## How it works:
-`~/eg/script/eg.sh` is a simple script which does this:  
+`~/eg/scripts/eg.sh` is a simple script which does this:  
 1. Verify that an eg file (for example `find.1`) exists in `~/eg`  
 2. Extract any relevant stuff you added to your `~/.eg file`  
 3. Paste them together  
