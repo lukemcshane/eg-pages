@@ -1,0 +1,28 @@
+.TH ls
+.SH Summary
+ls is used to list all the files in a directory
+.br
+For a short file, it's the quickest way to read the contents.
+.br
+More precisely, it concatenates one or more inputs to standard output.
+.SH Basics
+.B "ls"
+.br
+List the files and directories inside the current directory
+.br
+Hidden files (the name begins with '.') will not be included.
+.B "ls ~"
+.br
+List the files and directories inside the home directory. Again, this excludes hidden files.
+.br
+
+.B "ls -a ~"
+.br
+This time, include the hidden files.
+.br
+
+.B "ls -al ~"
+.br
+The -l parameter presents the output in a long listing format.
+.br
+It shows permissions, user/group, size and the date the file was last modified
