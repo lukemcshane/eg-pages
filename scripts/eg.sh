@@ -2,12 +2,14 @@
 
 eg() {
 
+local EG_PAGES_DIR=$HOME/eg/pages
+
 if [ "$#" -eq 0 ]; then
 	printf "%s\n" "What example page do you want?"
 	return 1
 fi
 
-if [ ! -f ~/eg/$1.1 ]; then
+if [ ! -f "$EG_PAGES_DIR"/$1.1 ]; then
 	printf "%s\n" "No example entry for $1"
 	return 1
 fi
@@ -24,8 +26,8 @@ EOF
 
 	mytext="$(awk -v cmd=$1 "$scriptVariable" ~/.eg)"
 
-	header="$(head -1 ~/eg/$1.1)"
-	body="$(tail -n +2 ~/eg/$1.1)"
+	header="$(head -1 "$EG_PAGES_DIR"/$1.1)"
+	body="$(tail -n +2 "$EG_PAGES_DIR"/$1.1)"
 	printf '%s\n%s\n%s' $header $mytext $body | man -l -
 }
 
