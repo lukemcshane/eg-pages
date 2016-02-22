@@ -19,7 +19,7 @@ mytext="$EG_PAGES_CUSTOM_DIR"/$1.md
 
 body="$EG_PAGES_DIR"/$1.md
 
-cat /dev/null $mytext $body |
+for f in /dev/null $mytext $body ; do cat "${f}"; echo; done |
 	pandoc -s --variable title="$1" -t man - |
 	# Use sed to replace [code] with [bold] and remove paragraph indents.
 	sed -e "s/\[C]/[B]/g; /\.IP/d" |  
