@@ -9,7 +9,7 @@ if [ "$#" -eq 0 ]; then
 	return 1
 fi
 
-if [ ! -f "$EG_PAGES_DIR"/$1.1 ]; then
+if [ ! -f "$EG_PAGES_DIR"/$1.md ]; then
 	printf "%s\n" "No example entry for $1"
 	return 1
 fi
@@ -26,8 +26,11 @@ EOF
 
 	mytext="$(awk -v cmd=$1 "$scriptVariable" ~/.eg)"
 
-	header="$(head -1 "$EG_PAGES_DIR"/$1.1)"
-	body="$(tail -n +2 "$EG_PAGES_DIR"/$1.1)"
-	printf '%s\n%s\n%s' $header $mytext $body | man -l -
+	header="$(head -1 "$EG_PAGES_DIR"/$1.md)"
+	body="$(tail -n +2 "$EG_PAGES_DIR"/$1.md)"
+	printf '%s\n%s\n%s' $header $mytext $body |
+		pandoc -s --variable title="$1" -t man $1.md |
+		sed -e "s/\[C]/[B]/g; /\.IP/d" |
+		man -l -
 }
 
