@@ -1,5 +1,5 @@
-
 # Summary
+
 cat is most often used just to print a file to the terminal.  
 For a short file, it's the quickest way to read the contents.  
 More precisely, it concatenates one or more inputs to standard output.  
