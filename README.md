@@ -2,7 +2,7 @@
 man pages are great, but sometimes all you need is a quick example - an eg page!
 
 eg pages are designed for those who
-  - have just encounterd a new command
+  - have just encountered a new command
   - keep forgetting how to use the find command
 
 Just type `eg find` to read the eg page for 'find'.
